@@ -1,0 +1,119 @@
+:root {
+  /* Primari Color */
+  --softBlue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+
+  /* Neutral */
+  --veryDarkBlueMain: hsl(217, 54%, 11%); /* main background */
+  --veryDarkBlueCard: hsl(216, 50%, 16%); /* card background */
+  --veryDarkBlueLine: hsl(215, 32%, 27%); /* line */
+  --white: hsl(0, 0%, 100%);
+
+  /* Font */
+  --font: "Outfit", sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  font-size: 16px;
+  font-family: var(--font);
+  background-color: var(--veryDarkBlueMain);
+}
+h2 {
+  color: var(--white);
+  margin-bottom: 2rem;
+}
+p {
+  font-size: 1.8rem;
+  color: var(--softBlue);
+  line-height: 1.5;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: var(--veryDarkBlueCard);
+  width: 90%;
+  max-width: 35rem;
+  margin: 5rem auto;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.card__img {
+  background-image: url(/images/image-equilibrium.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30rem;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+.card__test {
+  background-image: url(/images/icon-view.svg);
+  border-radius: 1rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 5rem;
+  background-color: var(--cyan);
+  height: 30rem;
+  opacity: 0;
+}
+
+.card__test:active {
+  background-color: rgba(0, 255, 247, 0.5);
+  opacity: 1;
+}
+
+.content__info {
+  margin-bottom: 2rem;
+}
+
+.content__price {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.2rem solid var(--veryDarkBlueLine);
+}
+
+.price,
+.price p {
+  color: var(--cyan);
+  margin-bottom: 1rem;
+}
+
+.creator {
+  margin-top: 2rem;
+  display: flex;
+}
+.creator img {
+  width: 3.5rem;
+  border-width: 0.2rem;
+  border-style: solid;
+  border-color: var(--white);
+  border-radius: 50%;
+  margin-right: 2rem;
+}
+
+.creator p {
+  align-self: center;
+}
+
+.creator span {
+  color: var(--white);
+}
